@@ -1,4 +1,4 @@
-# Estrutura de Dados 2025/2
+# Estrutura de Dados 2026/1
 
 Repositório destinado aos códigos feitos na aula de Estrutura de Dados 2026/1.
 
