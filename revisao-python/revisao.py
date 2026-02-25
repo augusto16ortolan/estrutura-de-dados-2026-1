@@ -1,3 +1,5 @@
+import operacoes
+
 # debugar o nosso codigo
 #print("Ola mundo")
 
@@ -34,6 +36,7 @@ divisao = multiplicacao / 2
 
 # ESTRUTURAS DE CONDICAO (IF, ELIF, ELSE)
 
+"""
 nota = 2
 
 if nota > 7 or nota == 7: # nota >= 7
@@ -43,6 +46,7 @@ elif nota > 3 and nota < 7:
 else:
     print("Reprovado")
 
+"""
 
 # ESTRUTURAS DE REPETICAO ou LACOS DE REPETICAO (WHILE, FOR)
 
@@ -63,6 +67,7 @@ while contador < 10:
 
 # FOR
 
+"""
 for i in range(5):
     print(i)
 
@@ -74,4 +79,44 @@ for nome in listaDeNomes:
 
     print(nome)
 
+"""
+
+### LISTAS
+
+"""
+numeros = []
+print(numeros)
+
+numeros.append(10)
+print(numeros)
+
+numeros.append(20)
+numeros.append(30)
+numeros.append(40)
+print(numeros)
+
+numeros.remove(10)
+print(numeros)
+"""
+
+"""
+def soma(valor1, valor2):
+    if type(valor1) == int and valor2 == int:
+        return valor1 + valor2
+
+    raise SystemError("Informe valores inteiros")
     
+try:
+    somatorio = soma("soma", 20)
+    somatorio = soma(somatorio, 30)
+    print(somatorio)
+except SystemError:
+    print("Ocorreu um erro")
+except:
+    print("Ocorreu um erro 2")
+"""
+
+# MÓDULOS
+
+print(operacoes.soma(10, 20))
+print(operacoes.multiplica(15, 3))
