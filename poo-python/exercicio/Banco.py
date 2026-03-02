@@ -23,4 +23,25 @@ class Banco:
 
     def exibir_contas(self):
         for conta in self.contas:
-            print(f"Conta {conta.numero}, saldo {conta.saldo}, titular {conta.titular}")
+            print(conta)
+
+    def exibir_total_contas(self):
+        print(f"O banco {self.nome} tem {len(self.contas)} conta(s)")
+
+    def exibir_valor_total_contas(self):
+        saldo_total = 0
+
+        for conta in self.contas:
+            saldo_total += conta.saldo
+
+        print(f"O banco {self.nome} tem R$ {saldo_total} de valor acumulado entre contas")
+
+    def transferir_valor_entre_contas(self, numeroContaOrigem, numeroContaDestino, valorTransferencia):
+        # adicionar todas as validacoes possiveis
+        
+        contaOrigem = self.recuperar_conta(numeroContaOrigem)
+        contaDestino = self.recuperar_conta(numeroContaDestino)
+
+        contaOrigem.sacar(valorTransferencia)
+        contaDestino.depositar(valorTransferencia)
+

@@ -18,3 +18,6 @@ class ContaBancaria:
 
     def exibir_saldo(self):
         print(f"O saldo da conta {self.numero} é R$ {self.saldo}") # formatar saldo como monetário do Brasil
+
+    def __str__(self):
+        return f"Conta número {self.numero}, titular {self.titular} e saldo {self.saldo}"
